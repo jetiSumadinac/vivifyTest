@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using VivifyTest.Helpers;
+using VivifyTest.Models.Interfaces.Generic;
 
 namespace VivifyTest.Models.Weapons
 {
@@ -9,6 +10,6 @@ namespace VivifyTest.Models.Weapons
     {
         public bool IsActive { get; set; }
         public WeaponsEnum WeaponEnum { get; internal set; }
-        
+        public int Damage { get; internal set; }
     }
 }

@@ -10,6 +10,7 @@ namespace VivifyTest.Models.Weapons
         public Spear() 
         {
             WeaponEnum = WeaponsEnum.Spear;
+            Damage = Settings.SPEAR_DAMAGE;
         }
 
     }
