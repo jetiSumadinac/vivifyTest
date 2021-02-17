@@ -11,6 +11,8 @@ namespace VivifyTest.Models.Weapons
         public Sword()
         {
             WeaponEnum = WeaponsEnum.Sword;
+            Damage = Settings.SWORD_DAMAGE;
         }
+
     }
 }

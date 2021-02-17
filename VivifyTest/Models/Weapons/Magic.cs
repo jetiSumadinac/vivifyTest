@@ -11,6 +11,7 @@ namespace VivifyTest.Models.Weapons
         public Magic()
         {
             WeaponEnum = WeaponsEnum.Magic;
+            Damage = Settings.MAGIC_DAMAGE;
         }
     }
 }
