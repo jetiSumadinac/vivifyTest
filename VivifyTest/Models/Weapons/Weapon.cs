@@ -8,10 +8,7 @@ namespace VivifyTest.Models.Weapons
     public abstract class Weapon
     {
         public bool IsActive { get; set; }
-        public Type Owner { get; set; }
-        public Weapon(HeroEnum owner)
-        {
-
-        }
+        public WeaponsEnum WeaponEnum { get; internal set; }
+        
     }
 }

@@ -13,19 +13,14 @@ namespace VivifyTest.Models.Heroes
             Health = 100;
         }
 
-        public override void AddWeapon(WeaponsEnum weaponType)
+        public override void AddWeapon(Weapon weapon)
         {
             if (Weapons.Count > Settings.MAX_WEAPON_NUM)
                 throw new Exception(nameof(AddWeapon)+"Max weapon number reached");
-            switch (weaponType)
-            {
-                case WeaponsEnum.Spear:
-                    Weapons.Add(new Spear(HeroEnum.Swordsman));
-                    break;
-                case WeaponsEnum.Sword:
-                    Weapons.Add(new Sword(HeroEnum.Swordsman));
-                    break;
-            }
+            if (weapon.WeaponEnum == WeaponsEnum.Magic)
+                throw new Exception("I cannot take magic as weapon!");
+            else
+                Weapons.Add(weapon);
         }
     }
 }

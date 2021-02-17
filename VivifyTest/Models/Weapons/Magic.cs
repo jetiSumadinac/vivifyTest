@@ -8,10 +8,9 @@ namespace VivifyTest.Models.Weapons
     public class Magic : Weapon
     {
 
-        public Magic(HeroEnum owner): base(owner)
+        public Magic()
         {
-            if (owner == HeroEnum.Swordsman)
-                throw new Exception("My owner cannot be swordsman");
+            WeaponEnum = WeaponsEnum.Magic;
         }
     }
 }

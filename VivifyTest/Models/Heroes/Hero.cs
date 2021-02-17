@@ -16,6 +16,6 @@ namespace VivifyTest.Models.Heroes
             Weapons.Capacity = Settings.MAX_WEAPON_NUM;
         }
 
-        public abstract void AddWeapon(WeaponsEnum weaponType);//TODO: not so smart idea, I have to reference a real owner
+        public abstract void AddWeapon(Weapon weapon);//TODO: not so smart idea, I have to reference a real owner
     }
 }

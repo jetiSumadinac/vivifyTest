@@ -13,8 +13,9 @@ namespace VivifyTest
             testInitialize();
         }
         static void testInitialize() {
+            var weapon1 = new Sword();
             var hero1 = new Swordsman();
-            hero1.Weapons.Add(new Sword(hero1));
+            hero1.AddWeapon(weapon1);
         }
     }
 }

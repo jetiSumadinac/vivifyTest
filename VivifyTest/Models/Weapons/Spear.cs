@@ -7,10 +7,9 @@ namespace VivifyTest.Models.Weapons
 {
     public class Spear : Weapon
     {
-        public Spear(HeroEnum owner) : base(owner)
+        public Spear() 
         {
-            if (owner == HeroEnum.Wizard)
-                throw new Exception("My owner cannot be wizard");
+            WeaponEnum = WeaponsEnum.Spear;
         }
 
     }
