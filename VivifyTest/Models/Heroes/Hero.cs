@@ -9,6 +9,7 @@ namespace VivifyTest.Models.Heroes
     public abstract class Hero
     {
         public int Health { get; set; }
+        public Weapon ActiveWeapon { get; set; }
         public List<Weapon> Weapons { get; private set; }
         public Hero()
         {
@@ -17,5 +18,7 @@ namespace VivifyTest.Models.Heroes
         }
 
         public abstract void AddWeapon(Weapon weapon);//TODO: not so smart idea, I have to reference a real owner
+        public abstract void ChangeWeapon();
+        public abstract void DropWeapon();
     }
 }
