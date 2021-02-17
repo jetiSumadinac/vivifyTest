@@ -33,7 +33,7 @@ namespace VivifyTest.Models.Heroes
             ActiveWeapon = newWeapon;
         }
 
-        public override void DropWeapon()
+        public override void DropWeapon() //TODO: these methods should be extended
         {
             throw new NotImplementedException();
         }
