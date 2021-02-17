@@ -1,5 +1,6 @@
 ﻿using System;
 using VivifyTest.Models.Heroes;
+using VivifyTest.Models.Monsters;
 using VivifyTest.Models.Weapons;
 
 namespace VivifyTest
@@ -16,6 +17,7 @@ namespace VivifyTest
             var weapon1 = new Sword();
             var hero1 = new Swordsman();
             hero1.AddWeapon(weapon1);
+            var monster1 = new Dragon();
         }
     }
 }
