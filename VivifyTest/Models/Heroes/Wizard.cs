@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using VivifyTest.Exceptions;
 using VivifyTest.Helpers;
 using VivifyTest.Models.Weapons;
 
@@ -22,6 +24,19 @@ namespace VivifyTest.Models.Heroes
                 throw new Exception("I cannot take spear as weapon!");
             else
                 Weapons.Add(weapon);
+        }
+        public override void ChangeWeapon() //TODO: repeatable code alert!!!!
+        {
+            if (Weapons.Count == 0)
+                throw new NoWeaponException();
+            var newWeapon = Weapons.FirstOrDefault(w => !w.IsActive);
+            newWeapon.IsActive = true;
+            ActiveWeapon = newWeapon;
+        }
+
+        public override void DropWeapon()
+        {
+            throw new NotImplementedException();
         }
     }
 }
